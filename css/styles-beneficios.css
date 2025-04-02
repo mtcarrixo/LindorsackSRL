@@ -1,0 +1,497 @@
+
+.toggle-beneficios {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.blue-line {
+    background-color: #004699; /* Color de la línea azul */
+    height: 5px;
+    margin-bottom: 20px; /* Espacio debajo de la línea */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blue-background {
+    background-color: #004699; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.blue-background h2 {
+    color: #FFDD33; /* Color del título */
+    margin-bottom: 20px;
+    text-align: left; /* Alineación del título a la izquierda */
+}
+
+.blue-background p {
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto */
+}
+
+.blue-background p, .blue-background h2 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.solutions-list {
+    list-style-type: none; /* Elimina las viñetas predeterminadas */
+    padding: 0;
+    text-align: center; /* Centrar el texto */
+}
+
+.solutions-list li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    padding-left: 30px; /* Espacio a la izquierda para la flecha */
+    position: relative;
+    line-height: 1.5; /* Ajusta la altura de línea para centrar verticalmente */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Inicialmente desplazado hacia abajo */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transición suave */
+}
+
+.solutions-list li::before {
+    content: '✔'; /* Flecha como viñeta */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente el tilde */
+    color: #FFDD33; /* Color de la flecha */
+    font-size: 1.2em; /* Tamaño de la flecha */
+    line-height: 1; /* Asegura que el tilde no se desplace */
+}
+
+.content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    padding: 20px;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio debajo de la barra lateral en pantallas pequeñas */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #007BFF; /* Color azul */
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    color: #333;
+    padding-left: 20px;
+    position: relative;
+}
+
+.sidebar ul li::before {
+    content: "✔";
+    color: #007BFF; /* Color azul */
+    position: absolute;
+    left: 0;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #007BFF; /* Color azul */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+}
+
+.contact-box button {
+    background-color: #fff;
+    color: #007BFF; /* Color azul */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-box button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.main-content {
+    width: 75%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    color: #007BFF; /* Color azul */
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    color: #333;
+    padding-left: 25px; /* Ajusta el padding para alinear el texto */
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.benefits-list li::before {
+    content: "✔";
+    color: #007BFF; /* Color azul */
+    position: absolute;
+    left: 0;
+    font-size: 1.2em; /* Tamaño del tilde */
+    line-height: 1; /* Asegura que el tilde no se desplace */
+    margin-right: 10px; /* Espacio entre el tilde y el texto */
+}
+
+.benefits-list li:nth-child(odd) {
+    background-color: #d9d9d9; /* Color gris oscurito */
+}
+
+.benefits-list li:nth-child(even) {
+    background-color: #f0f0f0; /* Color gris clarito */
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px !important;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #004699; /* Color de fondo del pie de página */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .blue-background {
+        width: 85%;
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .blue-background {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    header button {
+        display: block;
+        margin: 0 auto;
+        all: unset;
+    }
+
+    .toggle-beneficios {
+        display: block;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .contenedor-burger {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;  
+        border-radius: 5px;
+        
+    }	
+
+    .burger {
+        font-size: 2em;
+    }
+
+    .blue-background {
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        padding: 15px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+    }
+
+    .solutions-list li {
+        padding-left: 25px; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .solutions-list li::before {
+        font-size: 1em; /* Ajusta el tamaño de la flecha para pantallas pequeñas */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .mobile-menu ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+}
+
+@media (max-width: 576px) {
+    .blue-background {
+        padding: 10px; /* Reduce aún más el padding para pantallas muy pequeñas */
+    }
+
+    .solutions-list li {
+        padding-left: 20px; /* Ajusta el padding para pantallas muy pequeñas */
+    }
+
+    .solutions-list li::before {
+        font-size: 0.9em; /* Ajusta el tamaño de la flecha para pantallas muy pequeñas */
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .blue-background {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .solutions-list li {
+        padding-left: 15px;
+    }
+
+    .solutions-list li::before {
+        font-size: 0.9em;
+    }
+
+    .contact-box {
+        padding: 15px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 424px) {
+    .blue-background h2 {
+        font-size: 1.2em;
+    }
+
+    .blue-background p {
+        font-size: 1em;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2em;
+    }
+    
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 15px 0;
+    }
+
+    .blue-background {
+        padding: 8px;
+    }
+
+    .solutions-list li {
+        padding-left: 10px;
+    }
+
+    .solutions-list li::before {
+        font-size: 0.8em;
+    }
+
+    .contact-box {
+        padding: 10px;
+    }
+
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .mobile-menu.active {
+        margin-top: 0;
+        
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        right: 0px;
+        width: 200px;
+    }
+
+    ::-webkit-scrollbar {
+        display: block; /* Oculta la barra de desplazamiento en pantallas pequeñas */
+    }             
+}

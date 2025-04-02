@@ -1,0 +1,759 @@
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(4, 100, 163); /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el cursor */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    margin-top: 70px; /* Ajusta el valor según la altura del menú fijo */
+}
+
+nav div {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav div li {
+    margin-right: 20px;
+}
+
+.submenu {
+    display: none;
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 100%;
+    left: 0;
+    background-color: #003366;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.img_logo {
+    width: 70%;
+    height: 70%;
+    padding: 5px;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+nav {
+    background-color: rgb(255, 208, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0; /* Alinea el menú en la parte superior de la ventana */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho de la ventana */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.contenido {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+}
+
+
+
+#back-to-top {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+}
+
+#back-to-top:hover {
+    background-color: #004699;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+}
+
+.menu li:hover > a {
+    background-color: #004699;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.submenu li a {
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.submenu li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #002244;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.banner {
+    position: relative;
+    background-image: url(https://github.com/mtcarrixo/Imagenes/blob/main/ajtTxKS.png?raw=true);
+    background-size: cover;
+    background-position: left;
+    height: 500px;
+    color: white;
+    display: flex;
+    font-size: 1.7em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: space-between; /* Alinea los elementos dentro del banner */
+    align-items: center; /* Centra verticalmente los elementos dentro del banner */
+}
+
+.banner-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+.banner-mini {
+    position: relative;
+    background-image: url(https://github.com/mtcarrixo/Imagenes/blob/main/ajtTxKS.png?raw=true);
+    background-position: left;
+    background-size: cover;
+    height: 300px;
+    color: white;
+    display: flex;
+    font-size: 1.7em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: flex-start;
+}
+
+.banner-text {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.informacion {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/* Nuevo contenedor para las imágenes */
+.imagenes-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Espacio entre las imágenes */
+    padding: 30px 0 50px;
+}
+
+.imagenes-contenedor .imagen-item {
+    width: 300px; /* Ancho fijo del contenedor */
+    height: 400px; /* Alto fijo del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.815); /* Sombra suave */
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+}
+
+.imagen-item {
+    position: relative;
+    width: 300px; /* Ancho fijo del contenedor */
+    height: 400px; /* Ajusta el tamaño según sea necesario */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagen-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y se recorte si es necesario */
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.info h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+}
+
+.imagen-item:hover .info {
+    opacity: 1;
+}
+
+.imagen-item:hover img {
+    transform: scale(1.1);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    text-indent: 20px;
+}
+
+.hero-title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.hero-subtitle-1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.mobile-hero-text {
+    display: none;
+    text-align: center;
+}
+
+.mobile-hero-text span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo para el menú hamburguesa */
+.toggle-beneficios {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 200px;
+    background-color: rgb(4, 100, 163); /* Color de fondo igual al menú principal */
+    z-index: 1001;
+    text-align: right;
+    padding-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para el menú */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu.active {
+    display: block;
+    margin-top: 20px;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    text-align: right;
+    padding: 15px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: #FFDD33; /* Color de texto similar al menú principal */
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.mobile-menu ul li a:hover {
+    background-color: #004699;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px !important;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.1);
+}
+
+.carousel {
+    position: relative;
+    width: 500px; /* Ajusta el ancho del carrusel según sea necesario */
+    overflow: hidden;
+    margin-left: -20px; /* Ajusta este valor para mover el carrusel a la izquierda */
+    margin-right: 30px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: opacity 0.5s ease; /* Cambia la transición a opacidad */
+}
+
+.carousel-item.active {
+    transform: translateX(0); /* Posición de la imagen activa */
+}
+
+.carousel-item-next {
+    transform: translateX(100%); /* Desliza la siguiente imagen desde la derecha */
+}
+
+.carousel-item-prev {
+    transform: translateX(-100%); /* Desliza la imagen anterior desde la izquierda */
+}
+
+.carousel-item.active.carousel-item-left {
+    transform: translateX(-100%); /* Desliza la imagen activa hacia la izquierda */
+}
+
+.carousel-item.active.carousel-item-right {
+    transform: translateX(100%); /* Desliza la imagen activa hacia la derecha */
+}
+
+.carousel img {
+    height: 350px; /* Ajusta la altura de las imágenes */
+    width: 350px; /* Ajusta el ancho de las imágenes */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor del carrusel */
+    display: block;
+    margin: 0 auto;
+    padding: 10px; 
+}
+
+.img_caroussel {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.informacion {
+    font-family: Arial, sans-serif; /* Asegúrate de que sea la misma fuente que el nav */
+    font-size: 13px; /* Ajusta el tamaño de fuente según sea necesario */
+    text-align: center;
+    padding: 20px;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.clientes {
+    display: flex;
+    padding: 10px;
+    margin-left: 25%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.Empresas {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Empresas-Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.empresa-item {
+    flex-shrink: 0;
+    width: 150px; /* Ajusta el ancho de las imágenes */
+    height: auto;
+}
+
+.empresa-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Ajusta el radio de los bordes según sea necesario */
+}
+
+footer {
+    background-image: url(https://github.com/ValeBongi11/imagenes/blob/main/footer.png?raw=true);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia el fondo */
+}
+
+@media (max-width: 1200px) {
+    .menu li {
+        margin: 0 10px; /* Reduce el espacio lateral entre los elementos del menú */
+    }
+
+    .menu li a {
+        padding-left: 15px; /* Reduce el padding izquierdo */
+        padding-right: 15px; /* Reduce el padding derecho */
+    }
+
+
+
+    .imagenes-contenedor .imagen-item {
+        width: 250px; /* Ajusta el ancho del contenedor de la imagen */
+        height: 350px; /* Ajusta el alto del contenedor de la imagen */
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    nav{
+        display: none;
+    }
+
+    
+    header {
+        padding: 5px;
+        margin-top: 0px;
+    }
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    header button {
+        display: block;
+        margin: 0 auto;
+        all: unset;
+    }
+
+    .toggle-beneficios {
+        display: block;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .contenedor-burger {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;  
+        border-radius: 5px;
+        
+    }	
+
+    .burger {
+        font-size: 2em;
+        margin-bottom: 0px !important;
+    }
+
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 76px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .banner {
+        height: 200px;
+        justify-content: center;
+        font-size: 1.5em;
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+    }
+
+    .banner-mini {
+        height: 200px;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+
+    .mobile-hero-text {
+        display: block;
+    }
+
+    .hero-text {
+        display: none;
+    }
+
+    .carousel {
+        width: 100%; /* Ajusta el ancho del carrusel en pantallas pequeñas */
+        margin-top: 10px;
+    }
+
+    #carouselExampleIndicators {
+        display: none;
+    }
+
+    .imagenes-contenedor {
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+    }
+
+    .imagenes-contenedor .imagen-item {
+        width: 300px; /* Ajusta el ancho del contenedor de la imagen */
+        height: 400px; /* Ajusta el alto del contenedor de la imagen */
+        margin-bottom: 20px; /* Espacio inferior entre imágenes */
+    }
+}
+
+@media (max-width: 530px) {
+    .mobile-menu.active {
+        margin-top: 15px;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        right: 12.5px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .mobile-menu.active {
+        margin-top: 1px;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 88px;
+        right: 12.5px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    .banner {
+        height: 150px;
+        font-size: 1.2em;
+    }
+
+    .mobile-menu.active {
+        margin-top: 0;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 77.5px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .imagenes-contenedor .imagen-item {
+        width: 300px; /* Ajusta el ancho del contenedor de la imagen */
+        height: 400px; /* Ajusta el alto del contenedor de la imagen */
+    }	
+}
+
+@media (max-width: 424px) {
+    .banner {
+        height: 150px;
+        font-size: 1.2em;
+    }
+
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .mobile-menu.active {
+        margin-top: 0;
+    }
+    
+
+    .imagenes-contenedor {
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+    }
+
+    .imagenes-contenedor .imagen-item {
+        width: 200px; /* Ajusta el ancho del contenedor de la imagen */
+        height: 300px; /* Ajusta el alto del contenedor de la imagen */
+        margin-bottom: 20px; /* Espacio inferior entre imágenes */
+    }
+}
+
+@media (max-width: 320px) {
+    .banner {
+        height: 150px;
+        font-size: 1.2em;
+    }
+    .mobile-menu.active {
+        margin-top: 0;
+        
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        right: 0px;
+        width: 200px;
+    }                   
+
+    ::-webkit-scrollbar {
+        display: none; /* Oculta la barra de desplazamiento en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,547 @@
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(4, 100, 163); /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el cursor */
+}
+
+nav div {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+nav div li {
+    margin-right: 20px;
+    
+}
+
+.submenu {
+    border-radius: 8px;
+    padding: 10px;
+    width: 300px;
+    background: rgb(4, 100, 163);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas si es necesario */
+}
+.flex-container .producto {
+    width: 24%; /* Ajusta el ancho según sea necesario para que todas las imágenes ocupen el mismo tamaño */
+    margin-bottom: 10px; /* Espacio entre filas si hay más de una fila */
+}
+
+.banner-mini {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    contain: content;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.banner-mini img {
+    width: 100%; /* Ajusta el valor según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+@media (max-width: 1200px) {
+    .banner-mini img {
+        width: 80%; /* Ajusta el valor según sea necesario */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-mini img {
+        width: 60%; /* Ajusta el valor según sea necesario */
+    }
+
+    .banner-mini {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
+
+.producto {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.producto-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 180px; /* Ajusta el valor según sea necesario */
+    height: 270px; /* Ajusta el valor según sea necesario */
+}
+
+.contenido {
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.contenido-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los productos horizontalmente */
+    margin-top: 20px; /* Ajusta el valor según sea necesario */
+    padding-left: 100px; /* Ajusta el valor según sea necesario */
+    padding-right: 100px; /* Ajusta el valor según sea necesario */
+}
+
+.producto-recuadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px; /* Aumenta el espacio lateral entre productos */
+    margin-right: 40px; /* Aumenta el espacio lateral entre productos */
+    margin-bottom: 20px; /* Aumenta el espacio inferior entre productos */
+    padding: 10px; /* Reduce el espacio interno de cada producto */
+    border: 1.5px solid rgb(4, 100, 163);
+    border-radius: 8px;
+    width: 250px; /* Mantiene el tamaño del recuadro */
+    height: 350px; /* Mantiene el tamaño del recuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Añade una transición suave */
+}
+
+.producto-recuadro:hover {
+    background: rgb(129,129,129);
+    background: linear-gradient(0deg, rgb(167, 166, 166) 0%, rgb(212, 212, 212) 25%, rgb(255, 255, 255) 100%);
+}
+
+.producto-imagen {
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+    max-height: 270px; /* Ajusta el valor según sea necesario */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-nombre {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.saber-mas {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.saber-mas:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 1200px) {
+    .contenido-productos {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .producto-recuadro {
+        width: 250px; /* Mantiene el tamaño del recuadro */
+        height: 350px; /* Mantiene el tamaño del recuadro */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido-productos {
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+    }
+
+    .producto-recuadro {
+        width: 250px; /* Mantiene el tamaño del recuadro */
+        height: 350px; /* Mantiene el tamaño del recuadro */
+        margin: 10px 20px; /* Aumenta el espacio lateral entre productos */
+    }
+}
+
+@media (min-width: 1500px) {
+    .producto-recuadro {
+        margin-left: 60px; /* Aumenta el espacio lateral entre productos */
+        margin-right: 60px; /* Aumenta el espacio lateral entre productos */
+        margin-bottom: 30px; /* Aumenta el espacio inferior entre productos */
+    }
+}
+
+@media (min-width: 1600px) {
+    .producto-recuadro {
+        margin-left: 80px; /* Aumenta el espacio lateral entre productos */
+        margin-right: 80px; /* Aumenta el espacio lateral entre productos */
+        margin-bottom: 30px; /* Aumenta el espacio inferior entre productos */
+    }
+}
+
+@media (min-width: 1920px) {
+    .contenido-productos {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .producto-recuadro {
+        width: 280px;
+        height: 380px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .producto-imagen {
+        max-height: 300px;
+    }
+}
+
+/* Media Query para WQHD (2560x1440) */
+@media (min-width: 2560px) {
+    .contenido-productos {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .producto-recuadro {
+        width: 300px;
+        height: 400px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .producto-imagen {
+        max-height: 320px;
+    }
+
+    .banner-mini img {
+        width: 90%;
+    }
+}
+
+/* Media Query para 4K UHD (3840x2160) */
+@media (min-width: 3840px) {
+    .contenido-productos {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+
+    .producto-recuadro {
+        width: 350px;
+        height: 450px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .producto-imagen {
+        max-height: 350px;
+    }
+
+    .banner-mini img {
+        width: 100%;
+    }
+
+    .saber-mas {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px !important;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.1);
+}
+
+header {
+    border-bottom: 5px solid rgb(4, 100, 163);   
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .blue-background {
+        width: 85%;
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .blue-background {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    header button {
+        display: block;
+        margin: 0 auto;
+        all: unset;
+    }
+
+    .toggle-beneficios {
+        display: block;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .contenedor-burger {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;  
+        border-radius: 5px;
+        
+    }	
+
+    .burger {
+        font-size: 2em;
+    }
+
+    .blue-background {
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        padding: 15px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+    }
+
+    .solutions-list li {
+        padding-left: 25px; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .solutions-list li::before {
+        font-size: 1em; /* Ajusta el tamaño de la flecha para pantallas pequeñas */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 576px) {
+    .blue-background {
+        padding: 10px; /* Reduce aún más el padding para pantallas muy pequeñas */
+    }
+
+    .solutions-list li {
+        padding-left: 20px; /* Ajusta el padding para pantallas muy pequeñas */
+    }
+
+    .solutions-list li::before {
+        font-size: 0.9em; /* Ajusta el tamaño de la flecha para pantallas muy pequeñas */
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .blue-background {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .solutions-list li {
+        padding-left: 15px;
+    }
+
+    .solutions-list li::before {
+        font-size: 0.9em;
+    }
+
+    .contact-box {
+        padding: 15px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 424px) {
+    .blue-background h2 {
+        font-size: 1.2em;
+    }
+
+    .blue-background p {
+        font-size: 1em;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2em;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 12.5px;
+        width: 200px;
+    }
+    
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 72px;
+        right: 12.5px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 15px 0;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 63px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .blue-background {
+        padding: 8px;
+    }
+
+    .solutions-list li {
+        padding-left: 10px;
+    }
+
+    .solutions-list li::before {
+        font-size: 0.8em;
+    }
+
+    .contact-box {
+        padding: 10px;
+    }
+
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}

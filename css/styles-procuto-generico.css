@@ -1,0 +1,331 @@
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(4, 100, 163); /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el cursor */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+}
+
+nav div {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav div li {
+    margin-right: 20px;
+}
+
+.submenu {
+    border-radius: 8px !important;
+    padding: 10px !important;
+    width: 300px !important;
+    background: rgb(4, 100, 163) !important;
+}
+
+.titulo {
+    font-weight: 600;
+    text-align: center;
+    font-size: larger;
+    padding: 20px;
+    background-color: #413eda8a;
+    margin-top: 0;
+}
+
+.Texto-1 {
+    text-align: left;
+    font-size: large;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d9e1fa;
+    border-radius: 8px;
+}
+
+.Texto-2 {
+    font-size: large;
+    text-align: left;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d9e1fa;
+    border-radius: 8px;
+}
+
+.detalle-descripcion {
+    text-align: left;
+}
+
+footer {
+    margin-top: auto; /* Hace que el footer se mantenga en la parte inferior */
+    width: 100%;
+}
+
+.producto-detalle {
+    align-self: center;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+    margin-bottom: 20px;
+}
+
+.producto-imagen {
+    width: 300px; /* Tamaño estándar para todas las media queries */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin-right: 100px;
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin recortarse */
+}
+
+.producto-descripcion {
+    text-align: center;
+    max-width: 50%;
+}
+
+.producto-descripcion h2 {
+    margin-top: 0;
+}
+
+.producto-descripcion p {
+    text-align: left;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+.especificaciones {
+    align-self: center;
+    width: 80%;
+    background-color: #b7c2ffbd;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.especificaciones table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.especificaciones th, .especificaciones td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #414141;
+}
+
+.especificaciones th {
+    font-weight: bold;
+}
+
+.titulo-especificaciones {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: #413eda8a;
+    margin-top: 0;
+    border-radius: 8px;
+}
+
+/* Media Queries for responsive design */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px !important;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .producto-detalle {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .producto-imagen {
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del texto */
+        align-self: center;
+    }
+
+    .producto-descripcion {
+        max-width: 100%;
+        text-align: center; /* Centra el texto */
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 375px) {
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 320px) {
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Estilos para el nav */
+nav {
+    background-color: rgb(255, 208, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0; /* Alinea el menú en la parte superior de la ventana */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho de la ventana */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+}
+
+.menu li:hover > a {
+    background-color: #004699;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #003366;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.submenu li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #002244;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}

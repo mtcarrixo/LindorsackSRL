@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://github.com/mtcarrixo/Imagenes/blob/main/android-chrome-192x192.png?raw=true"><link rel="shortcut icon" href="https://github.com/mtcarrixo/Imagenes/blob/main/android-chrome-192x192.png?raw=true">
+    <link rel="stylesheet" href="/css/styles_productos.css">
+    <link rel="stylesheet" href="/css/styles-procuto-generico.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Producto Genérico - LINDORSACKS SRL</title>
+    <style>
+        nav div {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+        nav div li {
+            margin-right: 20px;
+        }
+    
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas si es necesario */
+        }
+        .flex-container .producto {
+            width: 24%; /* Ajusta el ancho según sea necesario para que todas las imágenes ocupen el mismo tamaño */
+            margin-bottom: 10px; /* Espacio entre filas si hay más de una fila */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="../../../../index.html"><img class="img_logo" src="https://github.com/mtcarrixo/Imagenes/blob/main/logo.png?raw=true" alt=""></a></div>
+        <div class="toggle-beneficios"><button id="menu-toggle" class="contenedor-burger"><p class="burger">☰</p></button></div>
+    </header>
+
+<nav>
+    <ul class="menu">
+        <li>
+            <a href="../../index.html">Inicio</a>
+        </li>
+        <li>
+            <a href="/pages/nosotros.html">Sobre Nosotros</a>
+        </li>
+        <li>
+            <a href="../../pages/productos.html">Productos</a>
+        </li>
+        <li>
+            <a href="/pages/otras/beneficios/beneficios.html">Beneficios</a>
+        </li>
+        <li>
+            <a href="/pages/otras/contacto.html">Contacto</a>
+        </li>
+
+        <li>
+            <a href="#" id="back-to-top">🔺</a>
+        </li>
+    </ul>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+    <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="/pages/nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="/pages/productos.html">Productos</a></li>
+        <li><a href="/pages/otras/beneficios/beneficios.html">Beneficios</a></li>
+        <li><a href="/pages/otras/contacto.html">Contacto</a></li>
+    </ul>
+</div>
+
+
+<div class="producto-detalle">
+    <div>
+        <img class="producto-imagen" src="https://github.com/mtcarrixo/Imagenes/blob/main/valvula%20de%20carga%20fondo%20ciego.png?raw=true" alt="Producto">
+    </div>
+    <div class="producto-descripcion">
+        <h2>VÁLVULA DE DESCARGA CON FONDO CIEGO</h2>
+        <div class="Texto-1"><p class="titulo">Super sacks tubular:</p>
+            <div class="detalle-descripcion">
+                <p>Sin costura lateral</p>
+                <p>Ancho fijo de 90cm x 90 cm</p>
+                <p>Altura variable según pedido</p></div>
+            </div>
+
+        <div class="Texto-2"><p class="titulo">Super sacks plano: </p>
+            <div class="detalle-descripcion">
+            <p>4 costuras laterales</p>
+            <p>Ancho variable según pedido</p>
+            <p>Altura variable según pedido</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="especificaciones">
+    <p class="titulo-especificaciones">Detalle de producto</p>
+    <table>
+        <tr>
+            <th>Material:</th>
+            <td>Polipropileno no laminado</td>
+        </tr>
+        <tr>
+            <th>Color:</th>
+            <td>Blanco</td>
+        </tr>
+        <tr>
+            <th>Tipo De Costuras:</th>
+            <td>Estándar</td>
+        </tr>
+        <tr>
+            <th>Tipo De Tejido:</th>
+            <td>Estándar</td>
+        </tr>
+        <tr>
+            <th>El Forro Interior:</th>
+            <td>Sin forro interior</td>
+        </tr>
+        <tr>
+            <th>Paleta Recomendada (Cm):</th>
+            <td>114 X 114</td>
+        </tr>
+        <tr>
+            <th>Largo X Ancho Interno (Cm):</th>
+            <td>95 X 95</td>
+        </tr>
+        <tr>
+            <th>Altura Interna (Cm):</th>
+            <td>105</td>
+        </tr>
+    </table>
+</div>
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/5493516622764" target="_blank" >
+        <img src="https://github.com/mtcarrixo/Imagenes/blob/main/icons8-whatsapp-96.png?raw=true" alt="WhatsApp" >
+    </a>
+</div>
+<footer>
+    <p>
+        <span>© 2021 LINDORSACKS SRL. Todos los derechos reservados.</span>
+        <span>Desarrollado por MVBC Solutions.</span>
+    </p>
+</footer> 
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function(event) {
+        event.stopPropagation();
+        document.querySelector('.mobile-menu').classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+    
+    document.getElementById('back-to-top').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.querySelector("#back-to-top");
+    
+        backToTopButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.documentElement.scrollTop = 0; // Para navegadores modernos
+            document.body.scrollTop = 0; // Para navegadores antiguos
+        });
+    });
+    
+    // Cierra el menú de hamburguesa cuando se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuToggle = document.getElementById('menu-toggle');
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+    
+    // Cierra el menú de hamburguesa cuando se arrastra la página
+    window.addEventListener('scroll', function() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+    
+    // Cierra el menú de hamburguesa cuando se hace un desplazamiento táctil hacia abajo
+    window.addEventListener('touchmove', function() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+        </script>
+
+<script>
+    document.getElementById('back-to-top').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.querySelector("#back-to-top");
+
+        backToTopButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.documentElement.scrollTop = 0; // Para navegadores modernos
+            document.body.scrollTop = 0; // Para navegadores antiguos
+        });
+    });
+</script>
+
+<script>
+    document.getElementById('back-to-top').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>

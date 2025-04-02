@@ -1,0 +1,339 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.submenu {
+    border-radius: 8px !important;
+    padding: 10px !important;
+    width: 300px !important;
+    background: rgb(4, 100, 163) !important;
+}
+
+@media (min-width: 600px) {
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.stat {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.stat-number {
+    font-size: 2em;
+    color: #007BFF; /* Color azul */
+}
+
+.stat-text {
+    font-size: 1em;
+    color: #333;
+}
+
+.info-sections {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.title{
+    padding-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    .info-sections {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.info-section {
+    width: 90%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 600px) {
+    .info-section {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        width: 100%;
+    }
+
+    .mobile-menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
+
+.info-section h2 {
+    color: #007BFF; /* Color azul */
+}
+
+.info-section p {
+    color: #333;
+}
+
+.info-section button {
+    background-color: #007BFF; /* Color azul */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-section button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .blue-background {
+        width: 85%;
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .blue-background {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    header button {
+        display: block;
+        margin: 0 auto;
+        all: unset;
+    }
+
+    .toggle-beneficios {
+        display: block;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .contenedor-burger {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;  
+        border-radius: 5px;
+        
+    }	
+
+    .burger {
+        font-size: 2em;
+    }
+
+    .blue-background {
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        padding: 15px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+    }
+
+    .solutions-list li {
+        padding-left: 25px; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .solutions-list li::before {
+        font-size: 1em; /* Ajusta el tamaño de la flecha para pantallas pequeñas */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 576px) {
+    .blue-background {
+        padding: 10px; /* Reduce aún más el padding para pantallas muy pequeñas */
+    }
+
+    .solutions-list li {
+        padding-left: 20px; /* Ajusta el padding para pantallas muy pequeñas */
+    }
+
+    .solutions-list li::before {
+        font-size: 0.9em; /* Ajusta el tamaño de la flecha para pantallas muy pequeñas */
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .blue-background {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .solutions-list li {
+        padding-left: 15px;
+    }
+
+    .solutions-list li::before {
+        font-size: 0.9em;
+    }
+
+    .contact-box {
+        padding: 15px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 424px) {
+    .blue-background h2 {
+        font-size: 1.2em;
+    }
+
+    .blue-background p {
+        font-size: 1em;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2em;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 12.5px;
+        width: 200px;
+    }
+    
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 72px;
+        right: 12.5px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 15px 0;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 63px;
+        right: 12.5px;
+        width: 200px;
+    }
+
+    .blue-background {
+        padding: 8px;
+    }
+
+    .solutions-list li {
+        padding-left: 10px;
+    }
+
+    .solutions-list li::before {
+        font-size: 0.8em;
+    }
+
+    .contact-box {
+        padding: 10px;
+    }
+
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+

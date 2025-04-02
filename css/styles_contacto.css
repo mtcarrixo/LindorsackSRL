@@ -1,0 +1,201 @@
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 15px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 15, 150); /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06014b; /* Color de la barra de desplazamiento al pasar el cursor */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+}
+
+footer {
+    margin-top: auto; /* Hace que el footer se mantenga en la parte inferior */
+    width: 100%;
+}
+
+.contacto {
+    background: linear-gradient(135deg, #0060A5, #0255A1);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+nav div {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav div li {
+    margin-right: 20px;
+}
+
+.submenu {
+    border-radius: 8px !important;
+    padding: 10px !important;
+    width: 300px !important;
+    background: rgb(4, 100, 163) !important;
+}
+
+.contacto h2 {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.contacto form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contacto button {
+    background: #FFD700;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background: #FFC107;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px !important;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.1);
+}
+
+.p-form {
+    padding: 6px;
+    display: block;
+    margin-bottom: 5px; /* Agrega un pequeño espacio */
+    margin-top: 5px;
+}
+
+.m-desplegable {
+    display: none;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
